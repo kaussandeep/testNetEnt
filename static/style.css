@@ -1,0 +1,103 @@
+@keyframes spin {
+    0% {
+        background-image: url('/Symbol_0.png');
+    }
+    15% {
+        background-image: url('/Symbol_1.png');
+    }
+    30% {
+        background-image: url('/Symbol_2.png');
+    }
+    45% {
+        background-image: url('/Symbol_3.png');
+    }
+    60% {
+        background-image: url('/Symbol_4.png');
+    }
+    85% {
+        background-image: url('/Symbol_5.png');
+    }
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);   
+    }
+}
+
+@keyframes pulse-anim{
+    0% {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+    50% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+}
+
+#result {
+    width: 100%;
+    display: inline-flex;
+}
+
+#result > div {
+    display: inline-block;
+    width: 80%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    background-image: url('/Symbol_0.png');
+}
+
+#result > div.pulse {
+    animation: pulse-anim 1s ease-in-out 20;
+}
+
+.spin #result div:nth-of-type(1){
+    animation: spin 1s ease-in-out 20;
+}
+
+.spin #result div:nth-of-type(2){
+    animation: spin 1s ease-in-out 20;
+    animation-delay: 300ms;
+}
+
+.spin #result div:nth-of-type(3){
+    animation: spin 1s ease-in-out 20;
+    animation-delay: 600ms;
+}
+
+#status {
+    text-align: center;
+}
+.spin #status {
+    display: none;
+}
+
+#start {
+    height: 100px;
+    background-image: url('/button.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: block;
+    padding: 40px 0;
+}
+.spin #start{
+    animation: rotate 1s linear 20;
+}
+
+body.spin {
+    cursor: progress;
+}
