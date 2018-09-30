@@ -9,12 +9,16 @@ NPM packages needed are
 
 
 To run the tests
-1.) Start the Webdriver manaeger
+Install all dependencies
+npm install
+
+ 1.) Start node JS
+ npm start
+2.) Start the Webdriver manaeger
   webdriver-manager update
   webdriver-manager start
   
- 2.) Start node JS
- npm start
+
  
 3.) Run the tests
 protractor conf.js
