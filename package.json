@@ -1,7 +1,7 @@
 {
-  "name": "netent",
+  "name": "Sandeep Game",
   "version": "1.0.0",
-  "description": "netent code assignment",
+  "description": "gamecode",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
