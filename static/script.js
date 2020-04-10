@@ -18,7 +18,7 @@
         statusEl = document.querySelector("#status"),
         timer;
 
-    var NETENT = {
+    var REEL = {
         ajax: function(url, callback) {
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
@@ -94,12 +94,12 @@
         }, SPINING_TIME);
 
         // get the outcome
-        NETENT.ajax("/outcome.json", function(result) {
+        REEL.ajax("/outcome.json", function(result) {
             result = JSON.parse(result);
 
             if (!result.error) {
-                    var winStatus = NETENT.updateStatus(result.value);
-                    NETENT.draw(result.value, winStatus);
+                    var winStatus = REEL.updateStatus(result.value);
+                    REEL.draw(result.value, winStatus);
             } else {
                 alert("Please reload");
             }
